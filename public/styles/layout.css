@@ -37,16 +37,13 @@ main {
   margin-right:2em;
   margin-left: 2em;
   border-radius: 10px;
-}
-
-.tweet {
   opacity: .70;
   z-index: 900;
 }
 
+
 .tweet:hover {
   opacity: 1.0;
-
 }
 
 .show-tweet .tweet header {
