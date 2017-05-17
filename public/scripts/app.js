@@ -52,9 +52,9 @@ var data = [
 ];
 
   function renderTweets(tweets) {
-    tweets.forEach((userObj) => {
-      $(".show-tweet").append(createTweetElement(userObj));
-    })
+    for(var i=0;i<tweets.length; i++) {
+      $(".show-tweet").append(createTweetElement(tweets[i]));
+    }
   }
 
   function createTweetElement(tweetData) {
