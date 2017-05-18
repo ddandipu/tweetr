@@ -25,3 +25,12 @@ $(document).ready(function() {
     fontAwe.css("display", "none");
   });
 });
+
+$(document).ready(function() {
+  $(".compose").on("click", function() {
+    $(".new-tweet").slideDown("500" , function () {
+    });
+    $(".new-tweet textarea").focus();
+    window.scrollTo(0,0);
+  });
+});

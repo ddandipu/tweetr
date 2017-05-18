@@ -7,7 +7,8 @@
   margin-right:2em;
   margin-left: 2em;
   border-radius: 10px;
-  background-color: #eee
+  background-color: #eee;
+  display:none;
 }
 
 .new-tweet h2 {
@@ -21,6 +22,7 @@
   border-top-color: black;
   height: 110px;
   border-top-width: .5px;
+
 }
 
 .new-tweet form textarea{
