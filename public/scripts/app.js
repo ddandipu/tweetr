@@ -34,13 +34,15 @@
     var $tweet = $("<article>").append($header, $message, $footer).addClass("tweet");
     return($tweet);
   }
+
 loadTweets();
 //Test / driver code (temporary). Eventually will get this from the server.
 
 
   $(".new-tweet").on("submit", "form", function(event) {
     event.preventDefault();
-    var tweetlength = $(this).find("textarea").val()
+    $(".show-tweet").empty();
+    var tweetlength = $(this).find("textarea").val();
     if (tweetlength.length > 140) {
       alert("Your tweet is too long");
       return;
