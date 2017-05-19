@@ -1,9 +1,10 @@
 "use strict";
 
-// Simulates the kind of delay we see with network or filesystem operations
 
 
-// Defines helper functions for saving and getting tweets, using the database `db`
+
+//functions which posts the randomized tweet into the mongoDB database
+// and gets it back each time a post is made
 module.exports = function makeDataHelpers(db) {
   return {
 

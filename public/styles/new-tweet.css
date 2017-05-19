@@ -1,3 +1,5 @@
+/*new tweet is the name I've given to the form which accepts new tweets
+it contains a title, text area with character counter and a button to submit*/
 .new-tweet {
   margin:0 auto;
   border-style:solid;

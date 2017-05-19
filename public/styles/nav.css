@@ -1,3 +1,8 @@
+/* the nav bar is always at the top of the page,
+it contains the logo, name and a compose button which pulls
+down the new tweet form and focuses on the textarea whereever you
+are on the page*/
+
 #nav-bar {
   margin : 0px;
   position: fixed;

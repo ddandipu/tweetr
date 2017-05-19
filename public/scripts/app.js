@@ -1,9 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
- $(document).ready(function() {
+//this page contains functions which post the inputted form value into the database
+// and then render the same page using AJAX with updated '.show-tweets class' shown
+$(document).ready(function() {
 
 
   function renderTweets(tweets) {
@@ -11,14 +8,17 @@
       $(".show-tweet").prepend(createTweetElement(tweets[i]));
     }
   }
-
+//This function goes through the data array, goes thru each data and applies
+//the createTweetElement (see below) function to each one (this creates the HTML element) and puts the resulting html into the
+//show-tweet class container
   function loadTweets() {
     $.ajax({
       url: "/tweets",
       method: "get"
     }).done(renderTweets);
     }
-
+//this function will be inputted into the AJAX success .done portion on the jQuery
+//function below, it renders the page with updated .show-tweets container
 
   function createTweetElement(tweetData) {
     var $profilepic = $("<img>").attr("src", tweetData.user.avatars.small).addClass("profile-pic");
@@ -34,11 +34,13 @@
     var $tweet = $("<article>").append($header, $message, $footer).addClass("tweet");
     return($tweet);
   }
-
+// this function builds the HTML element from the object on the database
 loadTweets();
-//Test / driver code (temporary). Eventually will get this from the server.
+//loads the page for the first time upon page load
 
-
+//the following jQuery fires off the functions above when the form button is clicked
+//It also contains if statements which doesn't allow empty tweets and tweets that have
+// too many characters (more than 140).
   $(".new-tweet").on("submit", "form", function(event) {
     event.preventDefault();
     $(".show-tweet").empty();
